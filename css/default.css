@@ -1,0 +1,814 @@
+
+
+/* -- 
+    CSS Reset
+ -- */
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, strike, strong, sub, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+small {margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline; background: transparent; font-size: 12px;}
+body {line-height: 1;}
+ol, ul, dl {list-style: none; padding: 0; margin: 0;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ""; content: none;}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+/* tables still need "cellspacing="0"" in the markup */
+table, table td {border-collapse: collapse;}
+object, embed, video {max-width: 100%;}
+a img, img a {border: none;}
+.ie6 img {width: 100%;}
+a:active {outline: none;} 
+a:focus {-moz-outline-style: none;}
+
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {display: table; content: "";}
+.clearfix:after {clear: both;}
+
+*, *::before, *::after {box-sizing: inherit;}
+
+
+article, aside, footer, header, nav, section {width: 100%; display: inline-block; text-align: center;}
+.photo-title {overflow: inherit !important;}
+
+@-ms-viewport {width: device-width;}
+/* -- 
+    / end. CSS Reset
+ -- */
+
+
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+ }
+
+ body {
+    width: 100%;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
+
+.container {position: relative; min-height: 200px; width: 100%; overflow: hidden;}
+
+#contentbody {width: 100%; padding: 20px 0;}
+
+.contentcenter {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+
+/* ~~ Адаптивная сетка ~~ */
+.col2, .col3, .col4, .col5, .col6,
+.col20, .col30, .col40, .col50, .col60,
+.col1-3, .col2-3,
+#allEntries>div {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 2;
+}
+.col2>li, .col3>li, .col4>li, .col5>li, .col6>li,
+.col2>div, .col3>div, .col4>div, .col5>div, .col6>div,
+.col20>li, .col30>li, .col40>li, .col50>li, .col60>li,
+.col20>div, .col30>div, .col40>div, .col50>div, .col60>div {
+    height: auto;
+    float: left;
+    margin: 10px 0;
+    text-align: left;;
+}
+.col2 h3, .col3 h3, .col4 h3, .col5 h3, .col6 h3,
+.col20 h3, .col30 h3, .col40 h3, .col50 h3, .col60 h3 {margin: 10px auto; color: #333333;}
+.col2 p, .col3 p, .col4 p, .col5 p, .col6 p,
+.col20 p, .col30 p, .col40 p, .col50 p, .col60 p {color: #808080;}
+
+
+.col2>li {width: calc(50% - 10px); float: left; text-align: left;}
+.col2>li:nth-of-type(2n+1) {margin-right: 10px; margin-left: 0;}
+.col2>li:nth-of-type(2n) {margin-right: 0; margin-left: 10px;}
+
+
+.col3>li {width: 33.33333%;}
+/* ~~ Центральные блоки ~~ */
+.col3>li:nth-child(2),
+.col3>li:nth-child(5),
+.col3>li:nth-child(8),
+.col3>li:nth-child(11) {width: calc(33.33333% - 40px); margin-right: 20px; margin-left: 20px;}
+
+
+.col4>li {width: 25%;}
+/* ~~ Первые блоки ~~ */
+.col4>li:nth-child(1), .col4>li:nth-child(5), .col4>li:nth-child(9) {width: calc(25% - 11px); margin-right: 11px;}
+/* ~~ Центральные 2 и 3 блоки ~~ */
+.col4>li:nth-child(2), .col4>li:nth-child(3),
+.col4>li:nth-child(6), .col4>li:nth-child(7),
+.col4>li:nth-child(10), .col4>li:nth-child(11),
+.col4>li:nth-child(14), .col4>li:nth-child(15) {width: calc(25% - 16px); margin-right: 8px; margin-left: 8px;}
+/* ~~ Последние блоки ~~ */
+.col4>li:nth-child(4), .col4>li:nth-child(8), .col4>li:nth-child(12) {width: calc(25% - 11px); margin-left: 11px;}
+
+#allEntries>div {width: calc(25% - 20px); margin-left: 10px; margin-right: 10px; vertical-align: top;}
+
+
+
+.col5>li, .col5>div {width: 20%;}
+/* ~~ Первые блоки ~~ */
+.col5>li:nth-child(1), .col5>li:nth-child(6), .col5>li:nth-child(11) {width: calc(20% - 10px); margin-right: 10px;}
+/* ~~ Центральные 2, 3 и 4 блоки ~~ */
+.col5>li:nth-child(2), .col5>li:nth-child(3), .col5>li:nth-child(4),
+.col5>li:nth-child(7), .col5>li:nth-child(8), .col5>li:nth-child(9),
+.col5>li:nth-child(12), .col5>li:nth-child(13), .col5>li:nth-child(14) {width: calc(20% - 10px); margin-right: 5px; margin-left: 5px;}
+/* ~~ Последние блоки ~~ */
+.col5>li:nth-child(5), .col5>li:nth-child(10), .col5>li:nth-child(15) {width: calc(20% - 10px); margin-left: 10px;}
+
+
+.col6>li, .col6>div {width: 16.666666%;}
+
+
+.col20>li, .col20>div {width: 50%;}
+.col30>li, .col30>div {width: 33.33333%;}
+.col40>li, .col40>div {width: 25%;}
+.col50>li, .col50>div {width: 20%;}
+.col60>li, .col60>div {width: 16.666666%;}
+
+
+.col1-3>li {float: left; text-align: left;}
+.col1-3>li:nth-of-type(2n+1) {width: calc(33.33333% - 10px);margin-right: 10px; margin-left: 0;}
+.col1-3>li:nth-of-type(2n) {width: calc(66.66666% - 10px);margin-right: 0; margin-left: 10px;}
+
+.col2-3>li {float: left; text-align: left;}
+.col2-3>li:nth-of-type(2n+1) {width: calc(66.66666% - 10px);margin-right: 10px; margin-left: 0;}
+.col2-3>li:nth-of-type(2n) {width: calc(33.33333% - 10px);margin-right: 0; margin-left: 10px;}
+
+
+
+@media screen and (max-width: 960px) {
+    /* ~~ Первые блоки ~~ */
+    .col4>li:nth-child(1), .col4>li:nth-child(4), .col4>li:nth-child(7) {width: calc(33.33333% - 15px); margin-right: 15px; margin-left: 0;}
+    /* ~~ Центральные блоки ~~ */
+    .col4>li:nth-child(2),
+    .col4>li:nth-child(5),
+    .col4>li:nth-child(8),
+    .col4>li:nth-child(11) {width: calc(33.33333% - 14px); margin-right: 7px; margin-left: 7px;}
+    /* ~~ Последние блоки ~~ */
+    .col4>li:nth-child(3), .col4>li:nth-child(6), .col4>li:nth-child(9) {width: calc(33.33333% - 15px); margin-right: 0; margin-left: 15px;}
+
+    .col5>li:nth-of-type(2n+1), .col5>li:nth-of-type(2n) {width: calc(33.33333% - 20px); margin-right: 10px; margin-left: 10px;}
+}
+
+
+@media screen and (max-width: 768px) {
+    .col2>li, .col20>li {width: 100%;}
+    .col2>li:nth-of-type(2n+1), .col2>li:nth-of-type(2n) {margin-right: 0; margin-left: 0;}
+
+    .col5>li {width: calc(50% - 20px); margin-right: 10px; margin-left: 10px;}
+
+    .col3>li, .col4>li {width: 50%;}
+    .col3>li:nth-of-type(2n+1),
+    .col4>li:nth-of-type(2n+1),
+    .col5>li:nth-of-type(2n+1),
+    .col6>li:nth-of-type(2n+1) {width: calc(50% - 10px); margin-right: 10px; margin-left: 0;}
+    .col3>li:nth-of-type(2n),
+    .col4>li:nth-of-type(2n),
+    .col5>li:nth-of-type(2n),
+    .col6>li:nth-of-type(2n),
+    #allEntries>div {width: calc(50% - 10px); margin-right: 0; margin-left: 10px;}
+}
+@media screen and (max-width: 567px) {
+    .col3>li, .col4>li, .col5>li, .col6>li,
+    .col3>li:nth-of-type(2n+1),
+    .col4>li:nth-of-type(2n+1),
+    .col5>li:nth-of-type(2n+1),
+    .col6>li:nth-of-type(2n+1),
+    .col3>li:nth-of-type(2n),
+    .col4>li:nth-of-type(2n),
+    .col5>li:nth-of-type(2n),
+    .col6>li:nth-of-type(2n),
+    #allEntries>div {width: 86%; margin: 0 7% 30px;}
+
+    .col20>li, .col30>li, .col40>li, .col50>li, .col60>li,
+    .col20>div, .col30>div, .col40>div, .col50>div, .col60>div {width: 100% !important; margin: 0 !important;}
+}
+/* ~~ / end. Адаптивная сетка ~~ */
+
+
+/* ~~ Таблица для прайс-листов и технических характеристик ~~ */
+.content table {width: 100% !important;}
+.shop-info table, .shop-info table td {border: 1px solid #ececea !important; border-left: none !important; border-right: none !important;}
+.shop-info table td {padding: 10px 3px !important;}
+.shop-info table tr:nth-child(odd) {background: none;}
+.shop-info table tr:nth-child(even) {background: #f2f2f2;}
+/* ~~ / end. Таблица для прайс-листов и технических характеристик ~~ */
+
+
+/* ~~ Список ~~ */
+.list {}
+.list li {margin-top: 0; margin-bottom: 5px; list-style-type: square; list-style-position: inside;}
+/* ~~ / end. Список ~~ */
+
+
+/* ~~ Разное ~~ */
+section {position: relative; padding: 40px 0;}
+section h2 {position: relative; display: inline-block; width: 100%; margin: 0 auto 30px; color: #1b1f2a; font-size: 30px; z-index: 2;}
+section h3, section h4 {margin: 0 auto 30px; color: #1b1f2a; font-weight: 600; z-index: 2;}
+section p {font-weight: normal;}
+@media screen and (max-width: 568px) {
+    section {padding: 20px 0;}
+    section h2 {margin: 0 auto 20px;}
+}
+
+
+.h2div h2:before {background: url('../img/h2div.png'); position: absolute; width: 30px; height: 30px; top: -5px; left: -18px; content: ''; z-index: -1;}
+
+
+.left {text-align: left;}
+.center {text-align: center;}
+.right {text-align: right;}
+
+
+.left li {text-align: left;}
+.center li {text-align: center;}
+.right li {text-align: right;}
+
+
+.imgleft, .imgcenter, .imgright {max-width: 100%; height: auto;}
+.imgleft {float: left; margin: 0 15px 10px 0;}
+.imgcenter {float: none; margin: 0 10px 10px 10px;}
+.imgright {float: right; margin: 0 0 10px 15px;}
+
+.img100 {max-width: 100%; width: 100%; height: auto;}
+
+
+
+
+
+
+
+
+/* ~~ / end. Разное ~~ */
+
+
+/* ~~ Фикс для анимации ~~ */
+.wow {visibility: hidden;}
+
+
+
+/* -- Внешний вид кнопок кнопок -- */
+.button {
+    position: relative;
+    display: inline-block;
+    min-width: 190px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none !important;
+    border-radius: 0px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+
+.descplus {
+    position: relative;
+    display: inline-block;
+    min-width: 130px;
+    margin: 0 auto;
+    padding: 14px 50px 14px 0px;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.descplus:before {
+    background: #fabf06;
+    position: absolute;
+    padding: 10px 16px;
+    font-family: "Font Awesome 5 Free";
+    color: #ffffff;
+    content: '\f105';
+    top: 5px;
+    right: 0px;
+    border-radius: 50px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+.descg {
+    padding: 12px 22px;
+    border: 2px solid rgba(0,0,0,0.1);
+    color: #999999 !important;
+    opacity: 0.9;
+}
+.descg:hover, .descg:active, .descg:focus {
+    border: 2px solid rgba(0,0,0,0.3);
+    color: #666666 !important;
+    opacity: 1;
+}
+
+
+.descw {
+    padding: 12px 22px;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.descw:hover, .descw:active, .descw:focus {
+    border: 2px solid #f0e384;
+    color: #f0c454 !important;
+    opacity: 1;
+}
+
+
+.descwb {
+    padding: 12px 22px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    color: #ffffff !important;
+    box-shadow: rgba(0,0,0,0.1) 0px 5px 35px;
+}
+.descwb:hover, .descwb:active, .descwb:focus {
+    box-shadow: rgba(0,0,0,0.2) 0px 10px 35px;
+}
+
+
+.yellow {
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffd716),color-stop(100%, #fda200));
+    background: -o-linear-gradient(left, #ffd716 0%, #fda200 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ffd716), to(#fda200));
+    background: linear-gradient(to right, #ffd716 0%, #fda200 100%);
+    bottom: 0;
+    border: none;
+    color: #2b2b2b !important;
+    opacity: 0.9;
+}
+.yellow:hover, .yellow:active, .yellow:focus {bottom: 3px; opacity: 1; -webkit-box-shadow: 0 11px 5px -10px rgba(166,135,58,0.9), 0 10px 8px -6px rgba(0,0,0,0.1), 0 8px 14px -6px rgba(255,208,89,0.85), 0 10px 16px -2px rgba(181,148,63,0.35); box-shadow: 0 11px 5px -10px rgba(166,135,58,0.9), 0 10px 8px -6px rgba(0,0,0,0.1), 0 8px 14px -6px rgba(255,208,89,0.85), 0 10px 16px -2px rgba(181,148,63,0.35);}
+
+
+
+.orange {
+    background: #fe7b1a !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.orange:hover, .orange:active, .orange:focus {background: #e46100; opacity: 1;  box-shadow: rgba(0,0,0,0.3) 0 5px 15px -6px;}
+
+
+
+.blue {
+    background: #2238ae !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.blue:hover, .blue:active, .blue:focus {opacity: 1; -webkit-box-shadow: rgba(0,0,0,0.2) 0px 5px 35px; box-shadow: rgba(0,0,0,0.2) 0px 5px 35px;}
+
+
+
+.blue2 {
+    background: #00adef !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.blue2:hover, .blue2:active, .blue2:focus {opacity: 1; box-shadow: rgba(0,0,0,0.3) 0 5px 15px -6px !important;}
+
+
+
+.blue3 {
+    background: #0064af !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.blue3:hover, .blue3:active, .blue3:focus {opacity: 1; -webkit-box-shadow: rgba(0,0,0,0.2) 0px 5px 35px; box-shadow: rgba(0,0,0,0.2) 0px 5px 35px;}
+
+
+
+.green {
+    background: #27b857 !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 1;
+}
+.green:hover, .green:active, .green:focus {background: #27b857 !important; box-shadow: rgba(0,0,0,0.3) 0 5px 15px -6px !important;}
+
+
+
+.green2 {
+    background: #4baf5a !important;
+    border: none;
+    color: #ffffff !important;
+    opacity: 1;
+}
+.green2:hover, .green2:active, .green2:focus {background: #27b857 !important; box-shadow: rgba(0,0,0,0.3) 0 5px 15px -6px !important;}
+
+
+
+.turquoise {
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(44,116,156,0.96)),color-stop(100%, rgba(11,129,133,0.96)));
+    background: -o-linear-gradient(left, rgba(44,116,156,0.96) 0%, rgba(11,129,133,0.96) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(44,116,156,0.96)), to(rgba(11,129,133,0.96)));
+    background: linear-gradient(to right, rgba(44,116,156,0.96) 0%, rgba(11,129,133,0.96) 100%);
+    border: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+.turquoise:hover, .turquoise:active, .turquoise:focus {opacity: 1; box-shadow: rgba(0,0,0,0.3) 0 5px 15px -6px;}
+/* -- / .end Внешний вид кнопок -- */
+
+
+
+/* -- 
+    Стили для uCoz
+-- */
+
+
+/* ~~ Хлебные крошки ~~ */
+.breadcrumbs-wrapper {font-size: 12px;}
+/* ~~ Фикс для выпадающего меню категорий при редактировании товара ~~ */
+form #uCatsMenu7 {top: 56px !important;left: 0 !important;}
+
+
+/* ~~ Настройка визуального оформления под uCoz ~~ */
+#puzadpn, .uadm.uadm--mini.uadm--fixed {display:none !important;}
+.gTable {background: none;}
+.fancybox-title-float-wrap .child {display: none !important;}
+
+
+/* ~~ Прозрачность lightbox ~~ */
+#fancybox-overlay {opacity:0.5 !important; -moz-opacity:0.5; filter:alpha(opacity=50);}
+
+
+
+/*-----window------*/
+.htabs li {padding-left: 30px;}
+.htabs li a {text-decoration: none;}
+.arcticmodal-overlay, .arcticmodal-container {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 10000;}
+.arcticmodal-container {overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+
+.arcticmodal-container_i {height: 100%; margin: 0 auto; }
+.arcticmodal-container_i2 {padding: 40px 0; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error {padding: 20px; border-radius: 10px; background: #000; color: #ffffff; }
+.arcticmodal-loading {width: 32px; height: 32px; border-radius: 10px; background: #ffffff url('../ajax-loader.gif') no-repeat 50% 50%; }
+
+.box-modal {
+    position: relative;
+    max-width: 90% !important;
+    min-width: 250px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 15px;  
+    background-color: rgba(255,255,255,.96);    
+    color: #333333;
+    border-radius: 7px;
+    -webkit-transition: .6s ease-out;   
+    -o-transition: .6s ease-out;    
+    transition: .6s ease-out;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 5px 35px;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 35px;
+}
+.box-modal #block h2 {text-align: center; margin: 0 auto 20px;}
+
+.box-modal_close {
+    position: absolute;
+    height: auto;
+    padding: 15px 11px 7px 11px;
+    top: -27px;
+    right: -24px;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 200;
+}
+.box-modal_close:hover {opacity: 0.7;}
+
+.box-modal_close span {display: table-cell; vertical-align: middle;}
+.box-modal_close em {
+    margin: 6px auto 14px;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+/* Стили всех линии */
+.box-modal_close em, .box-modal_close em::after, .box-modal_close em::before {
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 17px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Стили верхней и нижней линии */
+.box-modal_close em::before, .box-modal_close em::after {
+    background-color: #ffffff;
+    position: absolute;
+    content: '';
+    left: 0;
+    box-shadow: rgba(0,0,0,0.3) 0px 0px 3px;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+}
+/* Верхняя линия */
+.box-modal_close em::before {-webkit-transform: translateY(-6px); -ms-transform: translateY(-6px); transform: translateY(-6px);}
+/* Нижняя линия */
+.box-modal_close em::after {-webkit-transform: translateY(6px); -ms-transform: translateY(6px); transform: translateY(6px);}
+@media only screen and (min-width: 768px) {
+    .cd-auto-hide-header .nav-trigger {display: none;}
+}
+/* Поворот верхней линии */
+.box-modal_close em::before {-webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);}
+/* Поворот нижней линии */
+.box-modal_close em::after {-webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+
+
+/* --
+
+    Список классов и обозначение их применения по модулям
+    -----------------------------------------------------
+    .box-modal - Всплывающее окна
+    .manTable - Редактирование товара
+
+ -- */
+.manTable {margin: 0 0 20px 0;}
+.box-modal input,
+.box-modal textarea,
+.manTable input,
+.manTable textarea {
+    background: transparent;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 15px;
+    color: #666666;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #dedede;
+    -webkit-transition: all ease-out 0.7s;
+    -o-transition: all ease-out 0.7s;
+    transition: all ease-out 0.7s;
+}
+/* ~~ 
+    Редактирование товара
+ ~~ */
+/* ~~ Фикс ширины кнопки еще ~~ */
+.manTable input[type="checkbox"] {width: auto !important; min-width: 30px !important;}
+/* ~~ Ширина левой колонки ~~ */
+.manTd1 {width: 24% !important;}
+.manTd1, .manTd2 {font-size: 14px !important;}
+/* ~~ Отступы у линии ~~ */
+.manHr {margin: 0 auto !important;}
+
+
+#goodsform input[type="button" i], #goodsform input[type="reset" i] {
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffd716),color-stop(100%, #fda200));
+    background: -o-linear-gradient(left, #ffd716 0%, #fda200 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ffd716), to(#fda200));
+    background: linear-gradient(to right, #ffd716 0%, #fda200 100%);
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    min-width: 190px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    color: #2b2b2b;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none !important;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+#goodsform input[type="reset" i], #goodsform input[value="Вернуться к просмотру товара" i] {background: transparent !important; padding: 12px 18px !important; border: 2px solid #dedede;}
+
+
+#goodsform input[type="button" i]:hover, #goodsform input[type="button" i]:active, #goodsform input[type="button" i]:focus {
+    -webkit-box-shadow: 0 11px 5px -10px rgba(166,135,58,0.9), 0 10px 8px -6px rgba(0,0,0,0.1), 0 8px 14px -6px rgba(255,208,89,0.85), 0 10px 16px -2px rgba(181,148,63,0.35);
+    box-shadow: 0 11px 5px -10px rgba(166,135,58,0.9), 0 10px 8px -6px rgba(0,0,0,0.1), 0 8px 14px -6px rgba(255,208,89,0.85), 0 10px 16px -2px rgba(181,148,63,0.35);
+}
+#goodsform input[type="reset" i]:hover, #goodsform input[type="reset" i]:active, #goodsform input[type="reset" i]:focus,
+#goodsform input[value="Вернуться к просмотру товара" i]:hover, #goodsform input[value="Вернуться к просмотру товара" i]:active, #goodsform input[value="Вернуться к просмотру товара" i]:focus {
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 5px 25px !important;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 25px !important;
+}
+
+
+/* -- 
+    / end. Редактирование товара
+ -- */
+
+
+
+
+#table3 input[type="text" i] {width: 90%;}
+
+input[type="submit" i], #order-button, .reset-filters {
+    background-color: #4baf5a;
+    height: auto;
+    margin: 8px auto;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    max-width: 215px;
+    font-size: 14px;
+    color: #2b2b2b;
+    
+    text-decoration: none !important;
+    -webkit-box-shadow: rgba(0,0,0,0.08) 0px 5px 35px;
+    box-shadow: rgba(0,0,0,0.08) 0px 5px 35px;
+    -webkit-transition: all ease-out 0.7s;
+    -o-transition: all ease-out 0.7s;
+    transition: all ease-out 0.7s;
+}
+
+input.slauderPr2 {
+    background: #ffffff;
+    color: #0d69b2;
+    padding: 8px 17px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #ffd922;
+    text-decoration: none;
+    -webkit-transition: all ease-out 0.7s;
+    -o-transition: all ease-out 0.7s;
+    transition: all ease-out 0.7s;
+    cursor: pointer;
+}
+input.slauderPr2:link, input.slauderPr2:visited {text-transform: uppercase; font-size: 14px; text-decoration: none;}
+input.slauderPr2:hover, input.slauderPr2:active, input.slauderPr2:focus {text-decoration: none;}
+
+
+
+/* -- Внешний вид таблиц -- */
+.content table {width: 100% !important;}
+.shop-info table, .shop-info table td, .table, .table td {border: 1px solid #ececea !important; border-left: none !important; border-right: none !important;}
+.shop-info table td, .table td {padding: 10px 3px !important;}
+.shop-info table tr:nth-child(odd), .table tr:nth-child(odd) {background: transparent;}
+.shop-info table tr:nth-child(even), .table tr:nth-child(even) {background: #f2f2f2;}
+/* -- / .end Внешний вид таблиц -- */
+
+
+  
+/* -- Табы страницы товаров -- */
+.shop-tabs {
+    display: inline-block !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 20px 0 20px 0;
+    border-bottom: 1px solid #dedede;
+}
+.shop-tabs li {
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+}
+.shop-tabs li a:link, .shop-tabs li a:visited {display: inline-block; margin: 0 0 -1px 0; padding: 15px 15px; color: #949494; text-decoration: none;}
+.shop-tabs li a:hover, .shop-tabs li a:active, .shop-tabs li a:focus {color: #212121; text-decoration: none; border-bottom: 3px solid #dedede;}
+
+.postRest1 a {color: #212121 !important; border-bottom: 3px solid #ef7125 !important;}
+/* END -- /Табы страницы товаров -- */
+
+
+
+/* -- Внешний вид таблиц характеристик -- */
+.shop-info table, .shop-info table td {border: 1px solid #ececea !important; border-left: none !important; border-right: none !important;}
+.shop-info table td {padding: 10px 3px !important;}
+.shop-info table tr:nth-child(odd) {}
+.shop-info table tr:nth-child(even) {background: #f2f2f2;}
+/* END -- /Внешний вид таблиц характеристик -- */
+
+
+
+/* -- Переключатели страниц -- */
+.pgSwchA, .swchItemA, .swchItemA1 {
+    min-width: 26px;
+    width: auto !important;
+    padding: 5px 6px 3px 6px;
+    color: #333333;
+    border-bottom: 2px solid #f10c07;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.pgSwch:link, .pgSwch:visited, .swchItem:link, .swchItem:visited, .swchItem1:link, .swchItem1:visited {
+    min-width: 26px;
+    width: auto !important;
+    padding: 5px 6px 3px 6px;
+    color: #357cd4;
+    border-bottom: 2px solid #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.pgSwch:hover, .pgSwch:active, .pgSwch:focus, .swchItem:hover, .swchItem:active, .swchItem:focus, .swchItem1:hover, .swchItem1:active, .swchItem1:focus {
+    color: #357cd4;
+    border-bottom: 2px solid #357cd4;
+}
+
+
+.eDetails, .eDetails1, .eDetails2 {
+    border: 1px dashed #808080;
+    font-size: 10px;
+    margin: 2px 0px 10px;
+    padding: 2px 3px;
+}
+
+
+.wysibb-body {width: 97%; height: 90%; padding: 0 !important; margin: 10px !important;}
+.wysibb-text .wysibb-text-iframe {height: 150px !important;}
+
+#invoice-table {background: none !important;}
+/* END -- / -- Селекторы элементов/тегов -- */
+
+
+/* -- Отключение цены в корзине -- */
+.order-head-price, .order-head-sum, .order-item-price, .order-item-sum, .order-total {display: none !important;}
+
+
+/* -- Соглашение на использование cookie -- */
+.cookie-choices-info {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.96) !important;
+    margin: 0;
+    z-index: 999999;
+    color: #333333 !important;
+    padding: 15px 15px !important;
+    font: 1.1em/1.5 sans-serif;
+    font-size: 13px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0,0,0,0.1) 0px 0px 35px;
+}
+.cookie-choices-info a {
+    color: #0050be !important;
+    text-decoration: underline;
+}
+a.allow-cookies {
+    font: bold 0.9em/2 sans-serif;
+    background: #ffdb00 !important;
+    color: #333333 !important;
+    border-radius: 5px;
+    padding: 5px 12px 4px 12px !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: 0.6s; -o-transition: 0.6s; transition: 0.6s;
+    opacity: 0.8;
+}
+a.allow-cookies:hover, a.allow-cookies:active, a.allow-cookies:focus {opacity: 1.0; box-shadow: rgba(0,0,0,0.1) 0px 5px 25px;}
+/* -- / end. Соглашение на использование cookie -- */
+
+
+/* -- 
+    / end. Стили для uCoz
+-- */

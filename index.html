@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><?if($URI_ID$='page1')?><?else?>$MODULE_NAME$ | <?endif?> | $SITE_NAME$</title>
+<meta name="keywords" content="$MODULE_NAME$, $SITE_NAME$" />
+<meta name="description" content="$MODULE_NAME$ | $SITE_NAME$" />
+
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="css/mobile.css" />
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- /* Перед загрузкой удалить */ -->
+<script src="http://s55.ucoz.net/src/jquery-1.10.2.js"></script>
+<!-- END /* Перед загрузкой удалить */ -->
+</head>
+
+
+<body>
+<!--$GLOBAL_AHEADER$-->
+
+<div class="menu_fon" ></div>
+		
+<div class="container">
+	<header class="cd-auto-hide-header">
+		<div class="header">
+			<div class="contentcenter">
+				<ul class="vcard">
+					<li class="logo animated fadeInLeft">
+						<!-- Для валидатора vcard -->
+						<a href="$HOME_PAGE_LINK$"><img src="img/logo.png" class="photo" alt="$SITE_NAME$" title="Главная | $SITE_NAME$" /></a>
+					</li>
+
+					<li class="copyright-info">
+						<a href="$HOME_PAGE_LINK$" class="url"><span class="category">Категория</span> <span class="fn org">$SITE_NAME$</span></a>
+					</li>
+
+					<li class="mailto animated fadeInDown">
+						<div class="vcardcenter">
+							<a href="mailto:info@name.ru" target="_blink" class="email"><i class="far fa-envelope"></i>info@name.ru</a>
+						</div>
+					</li>
+
+					<li class="header-adr animated fadeInDown">
+						<div class="vcardcenter">
+							<a href="#">
+								<i class="fas fa-map-marker-alt"></i>
+								<div class="adr">
+									<b class="country-name" style="display: none;">Российская Федерация</b>
+									<b class="region" style="display: none;">Республика Татарстан</b>
+									<b class="locality">г. Набережные Челны,</b>
+									<b class="street-address">ул. Рубаненко, дом 16</b>
+								</div>
+								<div style="display: none;" class="pricerange">RUB</div>
+							</a>
+							<div style="display: none;">Мы работаем <span class="workhours">Пн-пт с 8:00 до 17:00, суббота-воскресенье - выходной.</span></div>
+						</div>
+					</li>
+
+					<li class="callto animated fadeInDown">
+						<div class="vcardcenter">
+							<a href="tel:8 (8552) 78-78-06"><i class="fas fa-phone fa-flip-horizontal"></i></a>
+							<a href="tel:+7 (8000) 000-00-00"><abbr class="tel" title="8 (8552) 78-78-06">8 (8552) 78-78-06</abbr></a>
+							<span class="toogle2"><a href="javascript:void(0);">Заказать звонок</a></span>
+						</div>
+					</li>
+					
+					<li class="header-link animated fadeInRight">
+						
+						<span class="toogle">
+							<a class="button green2" href="javascript:void(0);">Заказать звонок</a>
+						</span>
+						<!--
+						<div><a href="#"><i class="far fa-envelope"></i>Напишите нам</a></div>
+						<div class="toogle"><a href="javascript:void(0);"><i class="fas fa-phone fa-flip-horizontal"></i>Обратный звонок</a></div>
+						
+
+						<div class="header-cart">
+							<div class="vcardcenter">
+								<i class="fas fa-shopping-basket"></i>
+								<?if($BASKET$)?>
+									<h4>Корзина товаров</h4>
+									$BASKET$
+								<?endif?>
+							</div>
+						</div>
+						-->
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a href="#" id="touch-cart" class="mobile-cart animated fadeInDown" style="display: none;">	
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</a>
+
+		<a href="#" id="touch-menu" class="mobile-menu nav-trigger">	
+			<span>
+				<em aria-hidden="true"></em>
+			</span>
+		</a>
+		<nav class="header-menu animated fadeInDown">
+			<div id="uNMenuDiv2" class="uMenuV">
+				<ul class="uMenuRoot">
+					<li><a class="uMenuItemA" href="#"><span>Главная</span></a></li>
+					<li class="uWithSubmenu"><a href="#"><span>Каталог товаров</span><i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="#"><span>Название подпункта</span></a></li>
+							<li><a href="#"><span>Подпункт меню</span></a></li>
+							<li><a href="#"><span>Подпункт</span></a></li>
+							<li><a href="#"><span>Название подпункта</span></a></li>
+							<li><a href="#"><span>Подпункт меню</span></a></li>
+							<li><a href="#"><span>Подпункт</span></a></li>
+							<li><a href="#"><span>Название подпункта</span></a></li>
+							<li><a href="#"><span>Подпункт меню</span></a></li>
+							<li><a href="#"><span>Подпункт</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span>Наши услуги</span></a></li>
+					<li><a href="#"><span>О компании</span></a></li>
+					<li><a href="#"><span>Наши работы</span></a></li>
+					<li><a href="#"><span>Контакты</span></a></li>
+				</ul>
+			</div>
+			<!--$NMENU_1$-->
+			<div class="menumobile">
+				<a href="tel:8 (8552) 78-78-06"><i class="fas fa-phone fa-flip-horizontal"></i>8 (8552) 78-78-06</a>
+				<a href="mailto:info@name.ru" target="_blink" class="email"><i class="far fa-envelope"></i>info@name.ru</a>
+				<!--<a href="#" target="_blink" class="loguserm"><i class="far fa-user"></i>Личный кабинет</a>-->
+				<span class="toogle">
+					<a class="button green2" href="javascript:void(0);">Заказать звонок</a>
+				</span>
+			</div>
+		</nav>
+
+		<div class="menu_fon"></div>			
+	</header>
+
+	<section class="headerslider">
+		<div class="iosSliderDemo">
+			<div class="fluidHeight">
+				<div class="sliderContainer">
+					<div class="iosSlider">
+						<div class="slider">
+							<div class="item">
+								<div class="inner">
+									<img src="img/trans.gif" style="background-image: url('img/slider/1.jpg');" alt="" title=""/>
+									<div class="sliderdesk">
+										<h2 class="text1">Строительство деревянных домов в Набережных Челнах</h2>
+										<div class="text2">Работаем по всей Республике Татарстан</div>
+										<div class="text3">
+											<span><a class="button green2" href="#">Заказать</a></span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="inner">
+									<img src="img/trans.gif" style="background-image: url('img/slider/1.jpg');" alt="" title="" />
+									<div class="sliderdesk">
+										<h2 class="text1">Строительство деревянных домов в Набережных Челнах</h2>
+										<div class="text2">Работаем по всей Республике Татарстан</div>
+										<div class="text3">
+											<span><a class="button green2" href="#">Заказать</a></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="headerslaiderbg"></div>
+					</div>
+					<div class="slideSelectors">
+						<div class="item selected"></div>
+						<div class="item"></div>
+					</div>
+					<div class="slideSelectors slideSelectorstop">
+						<div class="prev"></div>
+						<div class="next"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main role="main">
+	<?if($URI_ID$='page1')?>
+		<section id="service">
+			<div class="contentcenter">
+				<h2>Строительство деревянных домов</h2>
+				<p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствуют подготовке и реализации форм развития. Таким образом, сложившаяся структура организации играет важную роль в формировании новых предложений.</p>
+				<ul class="col4 services">
+					<li>
+						<a href="#">
+							<h3><small>строительство из</small><br/>Оцилиндрованного бруса</h3>
+							<img src="img/serv/1.jpg" alt="Оцилиндрованного бруса" title="Оцилиндрованного бруса" />
+							<div class="desc">1 м<sup>2</sup> - 20 000 Р</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<h3><small>строительство из</small><br/>Клеённого бруса</h3>
+							<img src="img/serv/2.jpg" alt="Клеённого бруса" title="Клеённого бруса" />
+							<div class="desc">1 м<sup>2</sup> - 20 000 Р</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<h3><small>строительство из</small><br/>Профилированного бруса</h3>
+							<img src="img/serv/3.jpg" alt="Профилированного бруса" title="Профилированного бруса" />
+							<div class="desc">1 м<sup>2</sup> - 20 000 Р</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							<h3><small>строительство из</small><br/>Сруба ручной рубки</h3>
+							<img src="img/serv/4.jpg" alt="Сруба ручной рубки" title="Сруба ручной рубки" />
+							<div class="desc">1 м<sup>2</sup> - 20 000 Р</div>
+						</a>
+					</li>
+				</ul>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<ul class="col2-3">
+					<li>
+						<img src="img/serv/serv-bg.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<h3 style="color: #ffffff;">Проекты домов</h3>
+						<p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствуют подготовке и реализации форм развития.</p>
+						<a class="button descw" href="#">Узнать подробнее</a>
+					</li>
+				</ul>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<ul class="col1-3">
+					<li>
+						<h3>Проекты бань</h3>
+						<p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствуют подготовке и реализации форм развития.</p>
+						<a class="button green2" href="#">Узнать подробнее</a>
+					</li>
+					<li>
+						<img src="img/serv/serv-bg-2.png" alt="Название" title="Название" />
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="feedback">
+			<div class="contentcenter">
+				<ul class="col2">
+					<li>
+						<h2 style="color: #ffffff;">Остались вопросы?</h2>
+						Напишите нам и наши консультанты свяжутся с Вами.<br/>
+						<br/>
+						<a class="button green2" href="#">Написать нам</a>
+					</li>
+					<li>
+						<h2>Закажите звонок</h2>
+						<b>И мы перезвоним Вам.</b><br/>
+						<br/>
+						Или звоните по телефону:<br/>
+						<b>8 (8552) 78-78-06</b><br/>
+						<br/>
+						<span class="toogle">
+							<a class="button descw" href="javascript:void(0);">Заказать звонок</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+
+		<section id="portfolio">
+			<h2>Наши работы</h2>
+					<ul class="col50 portfolio1">
+						<li>
+							<a href="#">
+								<div class="portfolio1bg">
+									<img src="img/portfolio/1.jpg" alt="Название" title="Название" />
+								</div>
+								<div class="desc">
+									<h3>Название</h3>
+									<p>Описание преимущества краткое или подробное в одно предложение.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="portfolio1bg">
+									<img src="img/portfolio/2.jpg" alt="Название" title="Название" />
+								</div>
+								<div class="desc">
+									<h3>Название</h3>
+									<p>Описание преимущества краткое или подробное в одно предложение.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="portfolio1bg">
+									<img src="img/portfolio/3.jpg" alt="Название" title="Название" />
+								</div>
+								<div class="desc">
+									<h3>Название</h3>
+									<p>Описание преимущества краткое или подробное в одно предложение.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="portfolio1bg">
+									<img src="img/portfolio/4.jpg" alt="Название" title="Название" />
+								</div>
+								<div class="desc">
+									<h3>Название</h3>
+									<p>Описание преимущества краткое или подробное в одно предложение.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="portfolio1bg">
+									<img src="img/portfolio/5.jpg" alt="Название" title="Название" />
+								</div>
+								<div class="desc">
+									<h3>Название</h3>
+									<p>Описание преимущества краткое или подробное в одно предложение.</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+		<section id="partner">
+			<div class="contentcenter">
+				<h2>Партнеры</h2>
+				<ul class="col4 partner1">
+					<li>
+						<img src="img/partner/1.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/2.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/3.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/4.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/5.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/6.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/7.png" alt="Название" title="Название" />
+					</li>
+					<li>
+						<img src="img/partner/8.png" alt="Название" title="Название" />
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="document">
+			<div class="contentcenter">
+				<h2>Документы и сертификаты</h2>
+				<div class="responsive slider portfolio">
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/1.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/2.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/3.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/4.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/5.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/6.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/7.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/8.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+					<div>
+						<a href="#" class="ulightbox" target="_blank" rel="groupdocument" tabindex="0">
+							<div class="boxhrefimg">
+								<img src="img/document/9.jpg" alt="" title="" /><div class="boxhref"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact">
+			<div class="contact1map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2999197e7bfb0ee3a417e5eb68cac0c0f6b1e119f27e33786cd5b189b17947c9&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
+			</div>
+			<div class="contact-info">
+				<h2>Контакты</h2>
+				Телефон:<br/>
+				<b><a href="tel:8 (8552) 78-78-06">8 (8552) 78-78-06</a></b><br/>
+				<br/>
+				E-mail:<br/>
+				<b>info@gmail.com</b><br/>
+				<br/>
+				Адрес:<br/>
+				<b>Россия, РТ, г. Набережные Челны, ул. Рубаненко, 16</b><br/>
+				<br/>
+				График работы:<br/>
+				<b>Пн-пт с 8:00 до 17:00<br/>
+				Суббота-воскресенье - выходной.</b>
+			</div>
+		</section>
+
+		
+<footer>
+	<div class="footer-top">
+		<div class="contentcenter">
+			<ul class="col4">
+				<li class="animated fadeInLeft">
+					<a href="$HOME_PAGE_LINK$"><img class="photo" src="img/logo.png" alt="$SITE_NAME$" title="Главная | $SITE_NAME$" /></a>
+				</li>
+				<li class="animated fadeInLeft">
+					<h3>Компания</h3>
+					<ul class="footer-top-menu"
+						<li></i><a href="#">Главная</a></li>
+						<li></i><a href="#">Услуги</a></li>
+						<li></i><a href="#">О компании</a></li>
+						<li></i><a href="#">Доставка и оплата</a></li>
+						<li></i><a href="#">Справочник покупателя</a></li>
+						<li></i><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li class="animated fadeInLeft">
+					<h3>Каталог</h3>
+					<ul class="footer-top-menu">
+						<li></i><a href="#">Спецодежда</a></li>
+						<li></i><a href="#">Рабочая обувь</a></li>
+						<li></i><a href="#">Средства индивидуальной защиты</a></li>
+						<li></i><a href="#">Средства защиты рук</a></li>
+						<li></i><a href="#">Хозяйственная группа</a></li>
+						<li></i><a href="#">Распродажа</a></li>
+					</ul>
+				</li>
+				<li class="animated fadeInLeft">
+					<h3>Контакты</h3>
+					<ul class="footer-top-cont">
+						<li class="footer-callto">
+							<a href="tel:8 (8552) 78-78-06"><i class="fas fa-phone fa-flip-horizontal"></i></a>
+							<a href="tel:8 (8552) 78-78-06">8 (8552) 78-78-06</a>
+						</li>
+						<li><i class="far fa-envelope"></i>info@name.ru</li>
+						<li><i class="fas fa-map-marker-alt"></i>423800, Россия, Республика Татарстан, г. Набережные Челны, ул. Рубаненко, дом 16</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+
+
+<div style="display: none;">
+	<div class="box-modal login" id="boxUserFirstInfo">
+		<div class="box-modal_close arcticmodal-close"><span><em aria-hidden="true"></em></span></div>
+		<div id="block">
+			<h2>Заказать звонок</h2>
+			<!--$MFORM_2$-->
+			<form method="post" name="mform" id="mffZ9KjD" style="margin:0" enctype="multipart/form-data" onsubmit="funZ9KjD(); return false;" _lpchecked="1">
+				<input type="hidden" name="jkd498" value="1">
+				<input type="hidden" name="jkd428" value="1">
+				<table border="0" width="100%" id="table1" cellspacing="1" cellpadding="2">
+				<tbody><tr>
+					<td style="text-align: center;"><input type="text" name="f3" size="30" style="width:100%;" maxlength="70" aria-invalid="false" placeholder="Имя"> </td>
+				</tr>
+				<tr>
+					<td style="text-align: center;"><input type="text" name="f4" size="30" style="width:100%;" maxlength="70" aria-invalid="false" placeholder="Телефон"> </td>
+				</tr>
+				<tr>
+					<td style="text-align: center;"><textarea type="text" name="f4" size="30" style="width:100%;" maxlength="70" aria-invalid="false" placeholder="Сообщение"></textarea> </td>
+				</tr>
+				<tr style="display: none;">
+					<td><input type="text" name="f1" size="30" style="width:100%;" maxlength="70" value="zakaz@name.ru"> </td>
+				</tr>
+				<tr style="display: none;">
+					<td><input type="text" name="f2" size="30" style="width:100%;" maxlength="70" value="TatKrovStroy.ru - Заказать звонок"> </td>
+				</tr>
+				<tr>
+					<td style="text-align: center;"><input type="submit" value="Заказать звонок"></td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">
+						<small>Нажимая кнопку «Заказать», вы подтверждаете свое согласие на обработку персональных данных и принимаете <a href="#" target="_blank"></br>пользовательское соглашение</a>.</small>
+					</td>
+				</tr>
+				</tbody></table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div style="display: none;">
+	<div class="box-modal login" id="boxUserFirstInfo2">
+		<div class="box-modal_close arcticmodal-close"><span><em aria-hidden="true"></em></span></div>
+		<div id="block">
+			<h2>Оставить заявку</h2>
+			$MFORM_3$
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Общие скрипты -->
+<script src="js/general.js"></script>
+
+<!-- Главный слайдер iosSlider --> 
+<script src="js/jquery.easing-1.3.js"></script> 
+<script src="js/jquery.iosslider.js"></script>
+
+<!-- Дополнительный слайдер slick --> 
+<script src="js/slick.js"></script>
+
+<!-- Анимация WOW --> 
+<script src="js/wow.min.js"></script>
+
+<!-- Боковое меню --> 
+<script src="js/jquery.cookie.js"></script> 
+<script src="js/menu_shop-site.js"></script>
+
+</body>
+</html>
